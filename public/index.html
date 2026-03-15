@@ -180,9 +180,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 <script>
 fetch('/config').then(r => r.json()).then(cfg => {
   firebase.initializeApp(cfg);
-firebase.initializeApp(window.__firebaseConfig);
-const auth = firebase.auth();
-const provider = new firebase.auth.GoogleAuthProvider();
+  const auth = firebase.auth();
+  const provider = new firebase.auth.GoogleAuthProvider();
 
 const $ = id => document.getElementById(id);
 const loginScreen  = $('login-screen');
